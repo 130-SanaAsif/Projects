@@ -1,6 +1,6 @@
 import cv2
 
-cap = cv2.VideoCapture("Capture_Video.mp4")
+cap = cv2.VideoCapture("videos/Capture_Video.mp4")
 while True:
     isTrue,frame = cap.read()
     cv2.imshow("video",frame)

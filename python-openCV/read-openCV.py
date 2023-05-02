@@ -1,8 +1,8 @@
 import cv2
 
-image_path = r'image.png.jpg'
+image_path = r'photos/cat.jpg'
 image = cv2.imread(image_path)
-cv2.imshow('Sample Image',image)
+cv2.imshow('Cat',image)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
