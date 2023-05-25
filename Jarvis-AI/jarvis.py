@@ -48,7 +48,7 @@ def search_youtube(query):
     speak(f"Searching YouTube for {query}...")
 
     # Make a request to the YouTube Data API to retrieve search results
-    API_KEY = "YOUR_YOUTUBE_API_KEY"
+    API_KEY = "AIzaSyDM4Rvo2dBmDqUfCnamQmYf_HQ1h76bLGk"
     search_url = f"https://www.googleapis.com/youtube/v3/search?part=snippet&q={query}&key={API_KEY}"
     response = requests.get(search_url)
     json_data = json.loads(response.text)
@@ -103,26 +103,42 @@ if __name__ == "__main__":
             speak("According to wikipedia")
             print(results)
             speak(results)
+
         elif 'open youtube' in query:
             webbrowser.open("youtube.com")
+    
+        elif "search youtube" in query:
+            play_youtube_video()
+            
+        elif 'how are you elsa' in query:
+            speak("I'm Fine Ma'am! Whats about you?")
+
         elif 'open google' in query:
             webbrowser.open("google.com")
+
         elif 'search on google' in query:
             search_on_google()
+
         elif 'open udemy' in query:
             webbrowser.open("udemy.com")
+
         elif 'open linkedin' in query:
             webbrowser.open("linkedin.com")
+
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime('%H:%M:%S')
             speak(f"Ma'am, the time is {strTime}")
+
         elif 'open chat gpt' in query:
             webbrowser.open("chat.openai.com")
+
         elif 'open vs code' in query:
             codePath = "C:\\Users\\SANA\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
+
         elif 'close vs code' in query:
             close_vscode()
+
         elif 'go to sleep' in query:
             speak("Going to sleep")
             break
